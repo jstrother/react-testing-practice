@@ -2,17 +2,17 @@ const React = require('react');
 const TestUtils = require('react-addons-test-utils');
 const should = require('chai').should();
 
-const Image = require('../image');
+const Gallery = require('../gallery');
 
-describe('Image component', function() {
-	it('Renders the image and description', function() {
-		var url = "http://www.example.com/image.png";
+describe('Gallery component', function() {
+	it('Renders the gallery and series of images', function() {
+		var url = ["http://www.example.com/image.png"];
 		var description = "Example description";
 
 		var renderer = TestUtils.createRenderer();
-		renderer.render(<Image url={url} description={description} />);
+		renderer.render(<Gallery url={url} description={description} />);
 		var result = renderer.getRenderOutput();
-		result.props.className.should.equal('gallery-image');
+		result.props.className.should.equal('gallery');
 
 		var img = result.props.children[0];
 		img.type.should.equal('img');

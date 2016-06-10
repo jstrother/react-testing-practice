@@ -5,6 +5,7 @@ var Image = function(props) {
 		<div className="gallery-image">
 			<img src={props.url} alt={props.description} />
 			<p>{props.description}</p>
+		</div>
 	);
 };
 
