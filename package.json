@@ -6,7 +6,7 @@
   "devJS": "index.jsx",
   "scripts": {
     "start": "webpack-dev-server",
-    "test": "mocha --compilers js:babel-register test/**/*.jsx",
+    "test": "mocha --compilers js:babel-register test/*.jsx",
     "build": "webpack"
   },
   "babel": {
